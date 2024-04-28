@@ -84,4 +84,4 @@ Peak memory usage: 24.94 MiB.
    1) регулярный 
    2) по сути хочет вытаскивать последние по датам ентри из ad.positions_search
       то есть это **last point problem** 
-      - здесь есть примем как их решать и sql запросом и in a fancy way через MaterialisedView (22:11) https://youtu.be/j15dvPGzhyE?t=1331&si=d4_RDxDym_dI8HIR
+      - здесь есть примем как их решать и sql запросом и in a fancy way через MaterialisedView (по хорошему надо сделать MV) (22:11) https://youtu.be/j15dvPGzhyE?t=1331&si=d4_RDxDym_dI8HIR
