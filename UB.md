@@ -44,7 +44,7 @@ create table positions_search
 
 ## Моя оптимизация + устранение UB 
  
-В среднем раза в 3 быстрее
+В среднем раза в 1.5-2 быстрее
 
 ```sql
 with pids as (select distinct on (product_id) arrayJoin(products) as product_id
@@ -57,6 +57,7 @@ where (region_id, phrase, product_id, dt) in
        from ad.positions_search
        where dt > now()-3600 and product_id in pids and position < 100
        group by region_id, phrase, product_id)
+order by dt desc
     FORMAT TSVWithNamesAndTypes
 ```
 
